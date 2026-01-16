@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+@layer base {
+    :root{
+        --bg-dark:  240 15% 6%;
+        --text-primary:  30 20% 95%;
+
+    }
+
+    body{
+        background-color: hsl(var(--bg-dark));
+        color:hsl(var(--text-primary));
+        font-family: var(--font-inter);
+    }
+
+    h1,h2,h3,h4,h5,h6{
+        font-family:var(--font-space-grotesk);
+    }
+}
