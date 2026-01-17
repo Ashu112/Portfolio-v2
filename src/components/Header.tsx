@@ -13,7 +13,6 @@ export default function Header() {
         {/* Nav Links */}
         <ul className="flex items-center space-x-7">
           <li>
-            {" "}
             <Link href="/">About</Link>
           </li>
 
@@ -24,15 +23,12 @@ export default function Header() {
             <Link href="/">Projects</Link>
           </li>
           <li>
-            {" "}
             <Link href="/">Education</Link>
           </li>
           <li>
-            {" "}
             <Link href="/">Skills</Link>
           </li>
           <li>
-            {" "}
             <Link href="/">Contact</Link>
           </li>
         </ul>
