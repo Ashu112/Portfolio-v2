@@ -17,7 +17,7 @@ const navLink: NavLinkType = [
 
 export default function Header() {
   return (
-    <header className="px-10 py-5">
+    <header className="py-5">
       <nav className="section-container flex items-center justify-between">
         {/* logo */}
         <Link href="/" className="text-2xl font-bold">
@@ -28,7 +28,9 @@ export default function Header() {
         <ul className="flex items-center gap-1">
           {navLink.map((n, i) => (
             <li key={i} className="px-4 py-2">
-              <Link href={n.href}>{n.name}</Link>
+              <Link href={n.href} className="text-sm font-medium">
+                {n.name}
+              </Link>
             </li>
           ))}
         </ul>
