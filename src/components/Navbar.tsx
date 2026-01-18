@@ -17,7 +17,7 @@ const navLink: NavLinkType = [
 
 export default function Header() {
   return (
-    <header className="py-5">
+    <header className="hidden py-5 md:block">
       <nav className="section-container flex items-center justify-between">
         {/* logo */}
         <Link href="/" className="text-2xl font-bold">

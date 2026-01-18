@@ -100,7 +100,7 @@ export default function Hero() {
 
           {/* Hero right */}
           <div>
-            <div className="border-primary rounded-xl border px-6 py-4">
+            <div className="border-primary rounded-xl border px-10 py-6">
               <div className="mb-8 flex items-center gap-6">
                 <div className="bg-primary flex h-20 w-20 items-center justify-center rounded-xl">
                   <span className="text-primary-foreground text-3xl font-bold">
