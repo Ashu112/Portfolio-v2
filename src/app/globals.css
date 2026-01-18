@@ -1,14 +1,36 @@
 @import 'tailwindcss';
 
+@theme {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+}
+
 @layer base {
   :root {
-    --bg-dark: 240 15% 6%;
-    --text-primary: 30 20% 95%;
+    /* Light mode - warm pallete*/
+    --background: 30 25% 98%;
+    --foreground: 20 20% 12%;
+
+    --muted: 30 15% 92%;
+    --muted-foreground: 20 10% 45%;
   }
 
+  .dark {
+    /* Dark Mode - deep pallete with warm accents*/
+    --background: 240 15% 6%;
+    --foreground: 30 20% 95%;
+
+    --muted: 240 10% 18%;
+    --muted-foreground: 30 15% 65%;
+  }
+}
+
+@layer base {
   body {
-    background-color: hsl(var(--bg-dark));
-    color: hsl(var(--text-primary));
+    @apply bg-background text-foreground font-sans antialiased;
     font-family: var(--font-inter);
   }
 

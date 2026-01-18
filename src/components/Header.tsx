@@ -7,12 +7,12 @@ type NavLinkType = {
 }[];
 
 const navLink: NavLinkType = [
-  { name: 'About', href: '/' },
-  { name: 'Experience', href: '/' },
-  { name: 'Projects', href: '/' },
-  { name: 'Education', href: '/' },
-  { name: 'Skills', href: '/' },
-  { name: 'Contact', href: '/' },
+  { name: 'About', href: '#about' },
+  { name: 'Experience', href: '#experience' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Education', href: '#education' },
+  { name: 'Skills', href: '#skills' },
+  { name: 'Contact', href: '#contact' },
 ];
 
 export default function Header() {
@@ -36,7 +36,7 @@ export default function Header() {
         </ul>
 
         {/* Theme Toggle*/}
-        <button aria-label="Toggle dark mode">
+        <button aria-label="Toggle dark mode" className="bg-muted">
           <Moon />
         </button>
       </nav>
