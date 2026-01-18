@@ -13,6 +13,10 @@ type SocialLinkTypes = {
   icon: LucideIcon;
 }[];
 
+type TechStackTypes = {
+  name: string;
+}[];
+
 const socialLinks: SocialLinkTypes = [
   { name: 'github', url: 'https://github.com/Ashu112', icon: Github },
   {
@@ -23,10 +27,19 @@ const socialLinks: SocialLinkTypes = [
   { name: 'mail', url: 'kashu2611@gmail.com', icon: Mail },
 ];
 
+const techStack: TechStackTypes = [
+  { name: 'React' },
+  { name: 'TypeScript' },
+  { name: 'Next.js' },
+  { name: 'Astro' },
+  { name: 'Node.js' },
+  { name: 'Cloudflare' },
+];
+
 export default function Hero() {
   return (
     <section className="min-h-screen">
-      <div className="section-container pt-20">
+      <div className="section-container pt-6">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Hero left */}
           <div className="space-y-8">
@@ -86,7 +99,54 @@ export default function Hero() {
           </div>
 
           {/* Hero right */}
-          <div></div>
+          <div>
+            <div className="border-primary rounded-xl border px-6 py-4">
+              <div className="mb-8 flex items-center gap-6">
+                <div className="bg-primary flex h-20 w-20 items-center justify-center rounded-xl">
+                  <span className="text-primary-foreground text-3xl font-bold">
+                    AK
+                  </span>
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-foreground text-xl font-semibold">
+                    Ashutosh Kumar
+                  </h3>
+                  <p className="text-muted-foreground text-lg">
+                    Software Developer
+                  </p>
+                </div>
+              </div>
+              <div className="mb-8 space-y-4">
+                <p className="text-muted-foreground text-lg font-medium">
+                  TECH STACK
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {techStack.map((item, i) => (
+                    <span
+                      key={i}
+                      className="bg-muted/90 text-foreground rounded-xl px-4 py-2 text-sm"
+                    >
+                      {item.name}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="border-border mt-8 grid grid-cols-3 border-t pt-8">
+                <div className="text-center">
+                  <p className="text-xl font-bold text-pink-600">4+</p>
+                  <p className="text-muted-foreground text-base">Years Exp</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-xl font-bold text-pink-600">IIT </p>
+                  <p className="text-muted-foreground text-base">Guwahati</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-xl font-bold text-pink-600">20+</p>
+                  <p className="text-muted-foreground text-base">Projects</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
