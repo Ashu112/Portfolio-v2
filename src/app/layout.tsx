@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
-import Header from '@/components/Header';
 import { AppThemeProvider } from '@/app/providers/theme-provider';
+import Navbar from '@/components/Navbar';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -31,7 +31,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${spaceGrotesk.variable}`}>
         <AppThemeProvider>
-          <Header />
+          <Navbar />
           {children}
         </AppThemeProvider>
       </body>
