@@ -7,6 +7,8 @@
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
 
+  --color-border: hasl(var(--border));
+
   --color-muted: hsl(var(--muted));
   --color-muted-foreground: hsl(var(--muted-foreground));
 }
@@ -20,6 +22,8 @@
     --primary: 16 85% 60%;
     --primary-foreground: 0 0% 100%;
 
+    --border: 30 15% 88%;
+
     --muted: 30 15% 92%;
     --muted-foreground: 20 10% 45%;
   }
@@ -31,6 +35,8 @@
 
     --primary: 16 90% 65%;
     --primary-foreground: 240 15% 6%;
+
+    --border: 240 10% 18%;
 
     --muted: 240 10% 18%;
     --muted-foreground: 30 15% 65%;
