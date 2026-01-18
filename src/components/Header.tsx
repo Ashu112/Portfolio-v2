@@ -1,5 +1,5 @@
-import { Moon } from 'lucide-react';
 import Link from 'next/link';
+import ThemeSwitch from '@/components/ThemeSwitch';
 
 type NavLinkType = {
   name: string;
@@ -36,9 +36,7 @@ export default function Header() {
         </ul>
 
         {/* Theme Toggle*/}
-        <button aria-label="Toggle dark mode" className="bg-muted">
-          <Moon />
-        </button>
+        <ThemeSwitch />
       </nav>
     </header>
   );
