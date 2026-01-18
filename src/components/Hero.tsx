@@ -1,4 +1,11 @@
-import { Github, Linkedin, LucideIcon, Mail, MapPin } from 'lucide-react';
+import {
+  ArrowDown,
+  Github,
+  Linkedin,
+  LucideIcon,
+  Mail,
+  MapPin,
+} from 'lucide-react';
 
 type SocialLinkTypes = {
   name: string;
@@ -27,22 +34,39 @@ export default function Hero() {
               <span className="bg-primary h-2 w-2 rounded-full"></span>
               Open to opportunities
             </div>
-            <div>
-              <h1>Hi, I&apos;m Ashutosh Kumar</h1>
-              <div>Software Engineer</div>
+            <div className="space-y-4">
+              <h1 className="text-5xl leading-tight font-bold sm:text-6xl lg:text-7xl">
+                <span className="text-foreground"> Hi, I&apos;m</span>
+                <br />
+                <span> Ashutosh Kumar</span>
+              </h1>
+              <p className="text-muted-foreground text-xl sm:text-2xl">
+                Software Engineer
+              </p>
             </div>
-            <p>
+            <p className="text-muted-foreground max-w-xl text-lg leading-relaxed">
               Crafting performant, scalable web experiences with a focus on
               clean architecture and delightful user interactions. IIT Guwahati
               alumnus turning complex problems into elegant solutions.
             </p>
-            <div className="inline-flex gap-2">
-              <MapPin />
-              India
+            <div className="text-muted-foreground flex items-center gap-2">
+              <MapPin className="text-primary h-4 w-4" />
+              <span>India</span>
             </div>
-            <div>
-              <button>Explore My Work</button>
-              <button>Get in Touch</button>
+            <div className="flex items-center gap-6">
+              <a
+                href="#"
+                className="text-primary-foreground bg-primary/90 inline-flex items-center gap-2 rounded-xl px-6 py-3"
+              >
+                <span>Explore My Work</span>
+                <ArrowDown className="h-4 w-4" />
+              </a>
+              <a
+                href="#"
+                className="bg-muted/50 border-border inline-flex items-center gap-2 rounded-xl border px-6 py-3 font-medium"
+              >
+                Get in Touch
+              </a>
             </div>
             <div className="flex items-center gap-6 pt-4">
               <span className="text-muted-foreground text-sm">Find me on</span>
