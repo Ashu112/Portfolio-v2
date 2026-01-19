@@ -149,7 +149,7 @@ export default function About() {
         </div>
 
         {/* Step section */}
-        <div className="mt-20 grid grid-cols-3 gap-8">
+        <div className="mt-20 grid grid-cols-3 gap-12">
           {values.map((item, i) => (
             <div key={i}>
               <h2 className="text-6xl font-bold text-pink-300 opacity-20">
