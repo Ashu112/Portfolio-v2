@@ -1,4 +1,38 @@
+import { CodeXml, Lightbulb, LucideIcon, Rocket, Users } from 'lucide-react';
 import Image from 'next/image';
+
+type AboutSectionCardType = {
+  heading: string;
+  description: string;
+  icon: LucideIcon;
+}[];
+
+const aboutSectionCard: AboutSectionCardType = [
+  {
+    heading: 'Problem First',
+    description:
+      'I start every project by deeply understanding the problem space. The best solution solves the actual problem—not the most interesting one to build.',
+    icon: Lightbulb,
+  },
+  {
+    heading: 'Clean Architecture',
+    description:
+      'Code should be a pleasure to read and maintain. I believe in modular designs, clear interfaces, and patterns that scale with team growth.',
+    icon: CodeXml,
+  },
+  {
+    heading: 'Performance Obsessed',
+    description:
+      'A 200ms delay feels slow. From Core Web Vitals to bundle optimization, I sweat the details that make experiences feel instant.',
+    icon: Rocket,
+  },
+  {
+    heading: 'User-Centric',
+    description:
+      "Every technical decision should trace back to user impact. Beautiful code means nothing if it doesn't serve real people.",
+    icon: Users,
+  },
+];
 
 export default function About() {
   return (
@@ -70,7 +104,17 @@ export default function About() {
         </div>
 
         {/*Cards section */}
-        <div className="grid grid-cols-2"></div>
+        <div className="mt-20 grid gap-6 md:grid-cols-2">
+          {aboutSectionCard.map((item, i) => (
+            <div key={i} className="bg-card h-full rounded-2xl p-8">
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-pink-600">
+                <item.icon className="text-primary-foreground h-8 w-8" />
+              </div>
+              <h3 className="text-xl">{item.heading}</h3>
+              <p className="text-muted-foreground mt-3">{item.description}</p>
+            </div>
+          ))}
+        </div>
 
         {/* Step section */}
         <div className="grid grid-cols-3"></div>
