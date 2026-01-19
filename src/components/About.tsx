@@ -7,6 +7,12 @@ type AboutSectionCardType = {
   icon: LucideIcon;
 }[];
 
+type ValuesType = {
+  number: string;
+  name: string;
+  description: string;
+}[];
+
 const aboutSectionCard: AboutSectionCardType = [
   {
     heading: 'Problem First',
@@ -31,6 +37,27 @@ const aboutSectionCard: AboutSectionCardType = [
     description:
       "Every technical decision should trace back to user impact. Beautiful code means nothing if it doesn't serve real people.",
     icon: Users,
+  },
+];
+
+const values: ValuesType = [
+  {
+    number: '01',
+    name: 'Ownership',
+    description:
+      "I treat every project like it's my own. From first commit to production, I'm invested in the outcome.",
+  },
+  {
+    number: '02',
+    name: 'Iteration',
+    description:
+      'Perfect is the enemy of shipped. I build, measure, learn then improve based on real feedback.',
+  },
+  {
+    number: '03',
+    name: 'Collaboration',
+    description:
+      'The best solutions emerge from diverse perspectives. I thrive in cross-functional teams.',
   },
 ];
 
@@ -106,18 +133,35 @@ export default function About() {
         {/*Cards section */}
         <div className="mt-20 grid gap-6 md:grid-cols-2">
           {aboutSectionCard.map((item, i) => (
-            <div key={i} className="bg-card h-full rounded-2xl p-8">
+            <div
+              key={i}
+              className="bg-card border-border h-full rounded-2xl border p-8"
+            >
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-pink-600">
-                <item.icon className="text-primary-foreground h-8 w-8" />
+                <item.icon className="text-primary-foreground h-6 w-6" />
               </div>
               <h3 className="text-xl">{item.heading}</h3>
-              <p className="text-muted-foreground mt-3">{item.description}</p>
+              <p className="text-muted-foreground mt-3 leading-relaxed">
+                {item.description}
+              </p>
             </div>
           ))}
         </div>
 
         {/* Step section */}
-        <div className="grid grid-cols-3"></div>
+        <div className="mt-20 grid grid-cols-3 gap-8">
+          {values.map((item, i) => (
+            <div key={i}>
+              <h2 className="text-6xl font-bold text-pink-300 opacity-20">
+                {item.number}
+              </h2>
+              <h3 className="mt-2 text-lg font-semibold">{item.name}</h3>
+              <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
