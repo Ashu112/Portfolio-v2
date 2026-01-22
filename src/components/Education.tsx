@@ -1,5 +1,14 @@
 import { Award, GraduationCap, MapPin } from 'lucide-react';
 
+const courses: string[] = [
+  'Data Structure',
+  'Algorithms',
+  'System Design',
+  'Operating Systems',
+  'Computer Networks',
+  'DBMS',
+];
+
 export default function Education() {
   return (
     <section className="min-h-screen">
@@ -13,9 +22,9 @@ export default function Education() {
               premier institutions.
             </p>
           </div>
-          <div className="bg-card flex items-center gap-8 rounded-md px-10 py-8">
-            <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-pink-600">
-              <GraduationCap className="h-10 w-10 text-black" />
+          <div className="bg-card flex max-w-4xl gap-8 rounded-md px-10 py-8">
+            <div className="flex h-28 min-w-28 items-center justify-center rounded-2xl bg-pink-600">
+              <GraduationCap className="h-16 w-16 text-black" />
             </div>
             <div className="space-y-4">
               {/* Education title */}
@@ -52,6 +61,18 @@ export default function Education() {
                   environment shaped my problem-solving approach and technical
                   foundations.
                 </p>
+              </div>
+
+              {/* Courses Pill */}
+              <div className="flex flex-wrap items-center gap-2 pt-1">
+                {courses.map((c) => (
+                  <div
+                    className="bg-primary/10 text-primary text-medium inline-flex rounded-xl px-2.5 py-1.5 text-sm"
+                    key={c}
+                  >
+                    {c}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
