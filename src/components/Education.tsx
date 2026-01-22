@@ -1,4 +1,4 @@
-import { GraduationCap } from 'lucide-react';
+import { Award, GraduationCap, MapPin } from 'lucide-react';
 
 export default function Education() {
   return (
@@ -25,6 +25,32 @@ export default function Education() {
                 </h3>
                 <p className="text-xl font-semibold">
                   Bachelor of Technology in Computer Science and Engineering
+                </p>
+              </div>
+
+              {/* education info */}
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3">
+                  <Award className="text-primary h-6 w-6" />
+                  <p className="text-muted-foreground text-lg">Class of 2021</p>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <MapPin className="text-primary h-6 w-6" />
+                  <p className="text-muted-foreground text-lg">
+                    Guwahati, India
+                  </p>
+                </div>
+              </div>
+
+              {/* Education description */}
+              <div className="border-border border-t pt-8">
+                <p className="text-muted-foreground text-xl">
+                  IIT Guwahati is one of India&apos;s premier engineering
+                  institutions, consistently ranked among the top technical
+                  universities. The rigorous curriculum and competitive
+                  environment shaped my problem-solving approach and technical
+                  foundations.
                 </p>
               </div>
             </div>
