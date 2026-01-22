@@ -22,14 +22,14 @@ export default function Education() {
               premier institutions.
             </p>
           </div>
-          <div className="bg-card flex max-w-4xl gap-8 rounded-md px-10 py-8">
-            <div className="flex h-28 min-w-28 items-center justify-center rounded-2xl bg-pink-600">
+          <div className="bg-card flex max-w-4xl gap-8 rounded-md px-10 py-12">
+            <div className="flex h-32 min-w-32 items-center justify-center rounded-2xl bg-pink-600">
               <GraduationCap className="h-16 w-16 text-black" />
             </div>
             <div className="space-y-4">
               {/* Education title */}
               <div className="space-y-2">
-                <h3 className="text-2xl font-bold text-pink-600">
+                <h3 className="text-3xl font-bold text-pink-600">
                   Indian Institute of Technology, Guwahati
                 </h3>
                 <p className="text-xl font-semibold">
