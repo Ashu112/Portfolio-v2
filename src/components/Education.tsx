@@ -1,3 +1,26 @@
+import { GraduationCap } from 'lucide-react';
+
 export default function Education() {
-  return <section className="min-h-screen"></section>;
+  return (
+    <section className="min-h-screen">
+      <div className="section-container py-20">
+        <div className="space-y-10">
+          <div className="space-y-6">
+            <p className="text-primary">EDUCATION</p>
+            <h2>Academic Foundation</h2>
+            <p>
+              A strong foundation in Computer Science from one of India&apso;s
+              premier institutions.
+            </p>
+          </div>
+          <div className="bg-card grid gap-8 rounded-md px-10 py-8 md:grid-cols-2">
+            <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-pink-500">
+              <GraduationCap className="h-10 w-10 text-black" />
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
