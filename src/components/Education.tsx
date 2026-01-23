@@ -54,7 +54,7 @@ export default function Education() {
 
               {/* Education description */}
               <div className="border-border border-t pt-8">
-                <p className="text-muted-foreground text-xl">
+                <p className="text-muted-foreground text-base">
                   IIT Guwahati is one of India&apos;s premier engineering
                   institutions, consistently ranked among the top technical
                   universities. The rigorous curriculum and competitive
