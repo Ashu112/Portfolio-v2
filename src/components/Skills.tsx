@@ -13,7 +13,7 @@ export default function Skills() {
             </p>
           </div>
           {/* skills grid*/}
-          <div></div>
+          <div className=""></div>
           {/* Proficiency level*/}
           <div></div>
         </div>
