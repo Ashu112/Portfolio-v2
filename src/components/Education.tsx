@@ -11,7 +11,7 @@ const courses: string[] = [
 
 export default function Education() {
   return (
-    <section className="min-h-screen">
+    <section id="education" className="min-h-screen">
       <div className="section-container py-20">
         <div className="space-y-10">
           <div className="space-y-6">

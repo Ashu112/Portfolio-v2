@@ -2,9 +2,9 @@ import { skillCategories } from '@/data/skills';
 
 export default function Skills() {
   return (
-    <section className="min-h-screen">
+    <section id="skills" className="min-h-screen">
       <div className="section-container py-24">
-        <div className="space-y-6">
+        <div className="space-y-10">
           {/* Skills Heading */}
           <div className="space-y-4">
             <p className="text-primary text-base font-medium">Skills</p>
@@ -14,6 +14,7 @@ export default function Skills() {
               applications. Always learning, always improving.
             </p>
           </div>
+
           {/* skills grid*/}
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {skillCategories.map((category, i) => (
@@ -38,6 +39,7 @@ export default function Skills() {
               </div>
             ))}
           </div>
+
           {/* Proficiency level*/}
           <div></div>
         </div>
