@@ -17,7 +17,7 @@ const navLink: NavLinkType = [
 
 export default function Header() {
   return (
-    <header className="bg-background/10 sticky top-0 z-999 py-3 backdrop-blur-md md:block">
+    <header className="bg-background/10 sticky top-0 z-999 hidden py-3 backdrop-blur-md md:block">
       <nav className="section-container flex items-center justify-between">
         {/* logo */}
         <Link href="/" className="text-2xl font-bold">

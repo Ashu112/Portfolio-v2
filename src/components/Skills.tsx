@@ -4,7 +4,7 @@ export default function Skills() {
   return (
     <section id="skills" className="min-h-screen">
       <div className="section-container py-24">
-        <div className="space-y-10">
+        <div className="space-y-20">
           {/* Skills Heading */}
           <div className="space-y-4">
             <p className="text-primary text-base font-medium">Skills</p>
@@ -64,6 +64,16 @@ export default function Skills() {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Additional skills */}
+          <div className="mt-16 text-center">
+            <p className="text-muted-foreground">
+              <span className="gradient-text font-semibold">
+                Always exploring:
+              </span>{' '}
+              Rust, WebAssembly, Three.js, AI/ML integration
+            </p>
           </div>
         </div>
       </div>
