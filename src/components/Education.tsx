@@ -11,7 +11,7 @@ const courses: string[] = [
 
 export default function Education() {
   return (
-    <section className="min-h-screen">
+    <section id="education" className="min-h-screen">
       <div className="section-container py-20">
         <div className="space-y-10">
           <div className="space-y-6">
@@ -54,7 +54,7 @@ export default function Education() {
 
               {/* Education description */}
               <div className="border-border border-t pt-8">
-                <p className="text-muted-foreground text-xl">
+                <p className="text-muted-foreground text-base">
                   IIT Guwahati is one of India&apos;s premier engineering
                   institutions, consistently ranked among the top technical
                   universities. The rigorous curriculum and competitive
