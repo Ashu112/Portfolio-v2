@@ -1,3 +1,5 @@
+import { BookOpen } from 'lucide-react';
+
 export default function Blogs() {
   return (
     <section className="min-h-screen py-20">
@@ -13,7 +15,12 @@ export default function Blogs() {
           </p>
         </div>
         {/* Blogs Card */}
-        <div></div>
+        <div className="bg-card mt-16 flex items-center rounded-xl p-8">
+          <div className="flex size-28 items-center justify-center rounded-3xl bg-pink-400">
+            <BookOpen className="text-primary-foreground size-14" />
+          </div>
+          <div></div>
+        </div>
       </div>
     </section>
   );
