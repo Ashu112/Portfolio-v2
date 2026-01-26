@@ -17,7 +17,7 @@ export default function Contact() {
         </div>
         {/*Contact section Info and form */}
         <div className="grid gap-10 md:grid-cols-2">
-          <div></div>
+          <div className="space-y-5"></div>
           <div className="bg-card border-border rounded-2xl border p-6">
             <form className="flex flex-col items-start gap-6">
               <label>Your Name</label>
