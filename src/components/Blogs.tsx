@@ -3,7 +3,7 @@ import { ArrowRight, BookOpen, Clock } from 'lucide-react';
 
 export default function Blogs() {
   return (
-    <section className="py-24 lg:p-32">
+    <section className="py-24 lg:py-32">
       <div className="section-container">
         {/* Blogs Info */}
         <div className="space-y-4">
