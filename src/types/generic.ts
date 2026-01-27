@@ -1,7 +1,10 @@
+import { LucideIcon } from 'lucide-react';
+
 export type ContactDataType = {
   name: string;
   value: string;
-  icon: string;
+  icon: LucideIcon;
   arrowIcon: boolean;
   link?: string;
+  class: string;
 }[];

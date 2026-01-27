@@ -28,23 +28,23 @@ export default function Contact() {
             </p>
             <div className="space-y-4">
               {contactData.map((data) => (
-                <div
+                <Link
+                  target="_blank"
+                  href={`${data.link}`}
                   key={data.name}
                   className="border-border bg-card flex items-center justify-between rounded-2xl border px-4 py-2"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-pink-500"></div>
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-pink-500">
+                      <data.icon />
+                    </div>
                     <div className="space-y-2 text-start">
                       <p className="text-muted-foreground">{data.name}</p>
                       <p className="text-foreground">{data.value}</p>
                     </div>
                   </div>
-                  {data.arrowIcon && (
-                    <Link target="_blank" href={`${data.link}`}>
-                      <ArrowUpRight />
-                    </Link>
-                  )}
-                </div>
+                  {data.arrowIcon && <ArrowUpRight />}
+                </Link>
               ))}
             </div>
           </div>
