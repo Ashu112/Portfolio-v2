@@ -28,23 +28,42 @@ export default function Contact() {
             </p>
             <div className="space-y-4">
               {contactData.map((data) => (
-                <Link
-                  target="_blank"
-                  href={`${data.link}`}
-                  key={data.name}
-                  className="border-border bg-card flex items-center justify-between rounded-2xl border px-4 py-2"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-pink-500">
-                      <data.icon />
+                <div key={data.name}>
+                  {data.link ? (
+                    <Link
+                      target="_blank"
+                      href={`${data.link}`}
+                      className="border-border bg-card flex items-center justify-between rounded-2xl border px-4 py-2"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div
+                          className={`flex h-12 w-12 items-center justify-center rounded-xl ${data.style}`}
+                        >
+                          <data.icon className="size-5" />
+                        </div>
+                        <div className="space-y-2 text-start">
+                          <p className="text-muted-foreground">{data.name}</p>
+                          <p className="text-foreground">{data.value}</p>
+                        </div>
+                      </div>
+                      {data.arrowIcon && <ArrowUpRight />}
+                    </Link>
+                  ) : (
+                    <div className="border-border bg-card flex items-center justify-between rounded-2xl border px-4 py-2">
+                      <div className="flex items-center gap-4">
+                        <div
+                          className={`flex h-12 w-12 items-center justify-center rounded-xl ${data.style}`}
+                        >
+                          <data.icon className="size-5" />
+                        </div>
+                        <div className="space-y-2 text-start">
+                          <p className="text-muted-foreground">{data.name}</p>
+                          <p className="text-foreground">{data.value}</p>
+                        </div>
+                      </div>
                     </div>
-                    <div className="space-y-2 text-start">
-                      <p className="text-muted-foreground">{data.name}</p>
-                      <p className="text-foreground">{data.value}</p>
-                    </div>
-                  </div>
-                  {data.arrowIcon && <ArrowUpRight />}
-                </Link>
+                  )}
+                </div>
               ))}
             </div>
           </div>

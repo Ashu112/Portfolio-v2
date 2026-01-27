@@ -6,5 +6,5 @@ export type ContactDataType = {
   icon: LucideIcon;
   arrowIcon: boolean;
   link?: string;
-  class: string;
-}[];
+  style: string;
+};

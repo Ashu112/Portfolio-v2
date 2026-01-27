@@ -1,14 +1,14 @@
 import { ContactDataType } from '@/types/generic';
 import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
 
-export const contactData: ContactDataType = [
+export const contactData: ContactDataType[] = [
   {
     name: 'Email',
     value: 'kashu2611@gmail.com',
     icon: Mail,
     arrowIcon: true,
-    link: 'kashu2611@gmail.com',
-    class: 'bg-pink-500',
+    link: 'mailto:kashu2611@gmail.com',
+    style: 'bg-pink-500 text-background',
   },
   {
     name: 'LinkedIn',
@@ -16,7 +16,7 @@ export const contactData: ContactDataType = [
     icon: Linkedin,
     arrowIcon: true,
     link: 'https://www.linkedin.com/in/ashutosh-1126',
-    class: 'bg-[#0077B5] ',
+    style: 'bg-[#0077B5] ',
   },
   {
     name: 'Github',
@@ -24,13 +24,13 @@ export const contactData: ContactDataType = [
     icon: Github,
     arrowIcon: true,
     link: 'https://github.com/Ashu112',
-    class: 'bg-foreground',
+    style: 'bg-foreground text-background',
   },
   {
     name: 'Location',
     value: 'India',
     icon: MapPin,
     arrowIcon: false,
-    class: ' bg-muted',
+    style: ' bg-muted text-primary',
   },
 ];
