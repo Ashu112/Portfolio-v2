@@ -17,7 +17,14 @@ export default function Contact() {
         </div>
         {/*Contact section Info and form */}
         <div className="grid gap-10 md:grid-cols-2">
-          <div className="space-y-5"></div>
+          <div className="space-y-5">
+            <h4>Get in Touch</h4>
+            <p>
+              I&apos;m currently open to new opportunities and exciting
+              projects. Whether you have a question or just want to say hi,
+              I&apos;ll try my best to get back to you!
+            </p>
+          </div>
           <div className="bg-card border-border rounded-2xl border p-6">
             <form className="flex flex-col items-start gap-6">
               <label>Your Name</label>
