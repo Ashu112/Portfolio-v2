@@ -1,6 +1,26 @@
 import { contactData } from '@/data/contactData';
+import { ContactDataType } from '@/types/generic';
 import { ArrowUpRight, Send } from 'lucide-react';
 import Link from 'next/link';
+
+function ContactInfoCard({ data }: { data: ContactDataType }) {
+  return (
+    <>
+      <div className="flex items-center gap-4">
+        <div
+          className={`flex h-12 w-12 items-center justify-center rounded-xl ${data.style}`}
+        >
+          <data.icon className="size-5" />
+        </div>
+        <div className="space-y-2 text-start">
+          <p className="text-muted-foreground">{data.name}</p>
+          <p className="text-foreground">{data.value}</p>
+        </div>
+      </div>
+      {data.arrowIcon && <ArrowUpRight />}
+    </>
+  );
+}
 
 export default function Contact() {
   return (
@@ -27,44 +47,26 @@ export default function Contact() {
               I&apos;ll try my best to get back to you!
             </p>
             <div className="space-y-4">
-              {contactData.map((data) => (
-                <div key={data.name}>
-                  {data.link ? (
-                    <Link
-                      target="_blank"
-                      href={`${data.link}`}
-                      className="border-border bg-card flex items-center justify-between rounded-2xl border px-4 py-2"
-                    >
-                      <div className="flex items-center gap-4">
-                        <div
-                          className={`flex h-12 w-12 items-center justify-center rounded-xl ${data.style}`}
-                        >
-                          <data.icon className="size-5" />
-                        </div>
-                        <div className="space-y-2 text-start">
-                          <p className="text-muted-foreground">{data.name}</p>
-                          <p className="text-foreground">{data.value}</p>
-                        </div>
-                      </div>
-                      {data.arrowIcon && <ArrowUpRight />}
-                    </Link>
-                  ) : (
-                    <div className="border-border bg-card flex items-center justify-between rounded-2xl border px-4 py-2">
-                      <div className="flex items-center gap-4">
-                        <div
-                          className={`flex h-12 w-12 items-center justify-center rounded-xl ${data.style}`}
-                        >
-                          <data.icon className="size-5" />
-                        </div>
-                        <div className="space-y-2 text-start">
-                          <p className="text-muted-foreground">{data.name}</p>
-                          <p className="text-foreground">{data.value}</p>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ))}
+              {contactData.map((data) =>
+                data.link ? (
+                  <Link
+                    key={data.name}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={data.link}
+                    className="border-border bg-card flex items-center justify-between rounded-2xl border px-4 py-2"
+                  >
+                    <ContactInfoCard data={data} />
+                  </Link>
+                ) : (
+                  <div
+                    key={data.name}
+                    className="border-border bg-card flex items-center justify-between rounded-2xl border px-4 py-2"
+                  >
+                    <ContactInfoCard data={data} />
+                  </div>
+                ),
+              )}
             </div>
           </div>
           <div className="bg-card border-border rounded-2xl border p-6">
