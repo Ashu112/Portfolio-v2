@@ -8,11 +8,11 @@ function ContactInfoCard({ data }: { data: ContactDataType }) {
     <>
       <div className="flex items-center gap-4">
         <div
-          className={`flex h-12 w-12 items-center justify-center rounded-xl ${data.style}`}
+          className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${data.style}`}
         >
           <data.icon className="size-5" />
         </div>
-        <div className="space-y-2 text-start">
+        <div className="flex-1 space-y-2 text-start">
           <p className="text-muted-foreground">{data.name}</p>
           <p className="text-foreground">{data.value}</p>
         </div>
@@ -38,15 +38,15 @@ export default function Contact() {
           </p>
         </div>
         {/*Contact section Info and form */}
-        <div className="grid gap-10 md:grid-cols-2">
-          <div className="space-y-5">
-            <h4>Get in Touch</h4>
-            <p>
+        <div className="mt-16 grid gap-10 md:grid-cols-2">
+          <div className="space-y-4 text-start">
+            <h4 className="text-2xl font-bold">Get in Touch</h4>
+            <p className="text-muted-foreground">
               I&apos;m currently open to new opportunities and exciting
               projects. Whether you have a question or just want to say hi,
               I&apos;ll try my best to get back to you!
             </p>
-            <div className="space-y-4">
+            <div className="mt-7 space-y-6">
               {contactData.map((data) =>
                 data.link ? (
                   <Link
@@ -54,14 +54,14 @@ export default function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                     href={data.link}
-                    className="border-border bg-card flex items-center justify-between rounded-2xl border px-4 py-2"
+                    className="border-border bg-card flex items-center justify-between rounded-3xl border p-4"
                   >
                     <ContactInfoCard data={data} />
                   </Link>
                 ) : (
                   <div
                     key={data.name}
-                    className="border-border bg-card flex items-center justify-between rounded-2xl border px-4 py-2"
+                    className="border-border bg-card flex items-center justify-between rounded-3xl border p-4"
                   >
                     <ContactInfoCard data={data} />
                   </div>
