@@ -11,14 +11,14 @@ export const contactData: ContactDataType = [
   {
     name: 'LinkedIn',
     value: 'ashutosh-1126',
-    icon: 'Mail',
+    icon: 'Linkedin',
     arrowIcon: true,
     link: 'https://www.linkedin.com/in/ashutosh-1126',
   },
   {
     name: 'Github',
     value: 'Ashu112',
-    icon: 'Mail',
+    icon: 'Github',
     arrowIcon: true,
     link: 'https://github.com/Ashu112',
   },
