@@ -1,4 +1,5 @@
 import { experienceData } from '@/data/expereinceData';
+import { cn } from '@/utils/cn';
 
 export default function Experience() {
   return (
@@ -23,7 +24,10 @@ export default function Experience() {
             {experienceData.map((item, index) => (
               <div
                 key={item.companyName}
-                className={`relative flex flex-col gap-8 md:flex-row`}
+                className={cn(
+                  'relative flex flex-col gap-8 md:flex-row',
+                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse',
+                )}
               >
                 {/* timeline dot */}
                 <div className="absolute top-0 bottom-0 left-8 rounded-full bg-red-500 md:left-1/2"></div>
@@ -34,7 +38,10 @@ export default function Experience() {
                     {/* header */}
                     <div className="flex flex-col">
                       <div
-                        className={`inline-flex rounded-2xl bg-linear-to-r ${item.color} px-4 py-1.5 text-sm font-medium`}
+                        className={cn(
+                          'inline-flex rounded-2xl bg-linear-to-r px-4 py-1.5 text-sm font-medium',
+                          item.color,
+                        )}
                       >
                         {item.role}
                       </div>
