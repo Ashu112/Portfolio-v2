@@ -1,4 +1,4 @@
-import { experienceData } from '@/data/expereinceData';
+import { experienceData } from '@/data/experienceData';
 import { cn } from '@/utils/cn';
 
 export default function Experience() {
@@ -16,27 +16,37 @@ export default function Experience() {
           </p>
         </div>
         {/* timeline section */}
-        <div className="relative">
+        <div className="relative mt-16">
           {/* timeline line */}
-          <div className="absolute top-0 bottom-0 left-8 w-px bg-white md:left-1/2"></div>
+          <div className="timeline-line absolute top-0 bottom-0 left-8 w-px md:left-1/2"></div>
           {/* Experience item */}
           <div className="space-y-12">
             {experienceData.map((item, index) => (
               <div
                 key={item.companyName}
                 className={cn(
-                  'relative flex flex-col gap-8 md:flex-row',
+                  'relative flex flex-col gap-8',
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse',
                 )}
               >
                 {/* timeline dot */}
-                <div className="absolute top-0 bottom-0 left-8 rounded-full bg-red-500 md:left-1/2"></div>
+                <div className="timeline-dot absolute top-8 left-8 z-10 -translate-x-1/2 rounded-full md:left-1/2"></div>
 
                 {/* timeline card */}
-                <div className="flex-1">
+                <div
+                  className={cn(
+                    'flex-1 pl-20 md:pl-0',
+                    index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12',
+                  )}
+                >
                   <div className="bg-card border-border rounded-2xl border p-6 lg:p-8">
                     {/* header */}
-                    <div className="flex flex-col">
+                    <div
+                      className={cn(
+                        'mb-6 flex flex-col gap-4',
+                        index % 2 === 0 ? 'md:items-end' : 'md:items-start',
+                      )}
+                    >
                       <div
                         className={cn(
                           'inline-flex rounded-2xl bg-linear-to-r px-4 py-1.5 text-sm font-medium',
@@ -50,6 +60,8 @@ export default function Experience() {
                     {/* highlight */}
                   </div>
                 </div>
+                {/* spacer */}
+                <div className="hidden flex-1 md:block" />
               </div>
             ))}
           </div>

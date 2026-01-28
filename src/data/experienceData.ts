@@ -24,7 +24,7 @@ export const experienceData: ExperienceDataType[] = [
       'Delivered a production-grade real-time messaging platform using React, Node.js, WebSockets, and Twilio SDK, supporting 40+ daily active users with live messaging and presence.',
       'Implemented JWT-based authentication and role-based access control (RBAC), securing frontend routes and APIs while reducing permission management effort by 60%.',
     ],
-    color: 'from-gradient-mid to-gradient-end',
+    color: 'from-gradient-end to-gradient-start',
   },
   {
     companyName: 'Civil Services Preparation',
@@ -34,7 +34,7 @@ export const experienceData: ExperienceDataType[] = [
     highlights: [
       'Took a structured career sabbatical focused on civil services preparation, strengthening problem-solving, discipline, and long-term execution skills.',
     ],
-    color: 'from-gradient-mid to-gradient-end',
+    color: 'from-gradient-start to-gradient-mid',
   },
   {
     companyName: 'SISA Information Security',
