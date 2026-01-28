@@ -15,4 +15,5 @@ export type ExperienceDataType = {
   period: string;
   location: string;
   highlights: string[];
+  color: string;
 };

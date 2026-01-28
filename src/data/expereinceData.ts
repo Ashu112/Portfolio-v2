@@ -13,6 +13,7 @@ export const experienceData: ExperienceDataType[] = [
       'Built an SSR marketing website using Astro with GSAP animations and accessible UI patterns, improving Core Web Vitals from ~60 to 90+.',
       'Led frontend implementation of a real-time analytics dashboard using Chart.js with configurable views across 1k+ metrics; supported A/B testing initiatives that increased conversion by 15%.',
     ],
+    color: 'from-gradient-start to-gradient-mid',
   },
   {
     companyName: 'Anveshan',
@@ -23,6 +24,7 @@ export const experienceData: ExperienceDataType[] = [
       'Delivered a production-grade real-time messaging platform using React, Node.js, WebSockets, and Twilio SDK, supporting 40+ daily active users with live messaging and presence.',
       'Implemented JWT-based authentication and role-based access control (RBAC), securing frontend routes and APIs while reducing permission management effort by 60%.',
     ],
+    color: 'from-gradient-mid to-gradient-end',
   },
   {
     companyName: 'Civil Services Preparation',
@@ -32,6 +34,7 @@ export const experienceData: ExperienceDataType[] = [
     highlights: [
       'Took a structured career sabbatical focused on civil services preparation, strengthening problem-solving, discipline, and long-term execution skills.',
     ],
+    color: 'from-gradient-mid to-gradient-end',
   },
   {
     companyName: 'SISA Information Security',
@@ -43,5 +46,6 @@ export const experienceData: ExperienceDataType[] = [
       'Introduced advanced data visualizations using AG-Grid and Chart.js, improving SOC analyst investigation efficiency by 30% and reducing dashboard load time by 25%.',
       'Implemented unit and component testing with Jest and React Testing Library, achieving ~75% coverage and significantly reducing UI regressions.',
     ],
+    color: 'from-gradient-end to-gradient-start',
   },
 ];
