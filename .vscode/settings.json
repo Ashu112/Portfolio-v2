@@ -1,0 +1,16 @@
+{
+  "cSpell.words": [
+    "Anveshan",
+    "Ashutosh",
+    "Bengaluru",
+    "GSAP",
+    "Gurugram",
+    "SISA",
+    "Skima"
+  ],
+  "cSpell.ignoreRegExpList": [
+    "/[A-Za-z0-9-_]+:/", // Tailwind variants
+    "/[A-Za-z0-9-_]+\\//", // paths
+    "/\\b(px|rem|vh|vw)\\b/"
+  ]
+}

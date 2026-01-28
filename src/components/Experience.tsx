@@ -1,4 +1,4 @@
-export default function Expereince() {
+export default function Experience() {
   return (
     <section id="experience" className="min-h-screen py-20">
       <div className="section-container">
