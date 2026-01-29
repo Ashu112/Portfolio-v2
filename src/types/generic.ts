@@ -8,3 +8,12 @@ export type ContactDataType = {
   link?: string;
   style: string;
 };
+
+export type ExperienceDataType = {
+  companyName: string;
+  role: string;
+  period: string;
+  location: string;
+  highlights: string[];
+  color: string;
+};

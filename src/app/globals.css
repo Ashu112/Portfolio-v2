@@ -86,6 +86,27 @@
   .section-container {
     @apply mx-auto max-w-7xl px-6 lg:px-8;
   }
+
+  .timeline-line {
+    @apply absolute top-0 bottom-0 left-8 w-px md:left-1/2;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      hsl(var(--gradient-start)) 10%,
+      hsl(var(--gradient-mid)) 50%,
+      hsl(var(--gradient-end)) 90%,
+      transparent 100%
+    );
+  }
+
+  .timeline-dot {
+    @apply absolute h-4 w-4 rounded-full;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gradient-start)),
+      hsl(var(--gradient-mid))
+    );
+  }
 }
 
 @layer components {
