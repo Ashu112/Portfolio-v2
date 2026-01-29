@@ -50,7 +50,7 @@ export default function Experience() {
                     >
                       <div
                         className={cn(
-                          'inline-flex rounded-2xl bg-linear-to-r px-4 py-1.5 text-sm font-medium',
+                          'text-primary-foreground inline-flex rounded-2xl bg-linear-to-r px-4 py-1.5 text-sm font-medium',
                           item.color,
                         )}
                       >
