@@ -1,5 +1,6 @@
 import { experienceData } from '@/data/experienceData';
 import { cn } from '@/utils/cn';
+import { Calendar, ChevronRight, MapPin } from 'lucide-react';
 
 export default function Experience() {
   return (
@@ -55,12 +56,41 @@ export default function Experience() {
                       >
                         {item.role}
                       </div>
+                      <h3 className="text-2xl font-bold">{item.companyName}</h3>
+                      <div className="text-muted-foreground flex flex-wrap gap-4 text-sm">
+                        <div className="flex items-center gap-1.5">
+                          <Calendar className="size-4" />
+                          {item.period}
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <MapPin className="size-4" />
+                          {item.location}
+                        </div>
+                      </div>
                     </div>
 
                     {/* highlight */}
+                    <ul
+                      className={cn(
+                        'space-y-3',
+                        index % 2 === 0 ? 'md:text-left' : '',
+                      )}
+                    >
+                      {item.highlights.map((highlight, i) => (
+                        <li
+                          key={i}
+                          className="text-muted-foreground flex items-start gap-3"
+                        >
+                          <ChevronRight className="text-primary mt-1 size-4 shrink-0" />
+                          <span className="text-sm leading-relaxed">
+                            {highlight}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
-                {/* spacer */}
+                {/* spacer for alternating layout */}
                 <div className="hidden flex-1 md:block" />
               </div>
             ))}
