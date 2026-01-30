@@ -6,7 +6,8 @@
     "GSAP",
     "Gurugram",
     "SISA",
-    "Skima"
+    "Skima",
+    "Xyflow"
   ],
   "cSpell.ignoreRegExpList": [
     "/[A-Za-z0-9-_]+:/", // Tailwind variants
