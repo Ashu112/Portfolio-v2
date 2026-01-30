@@ -38,13 +38,13 @@ export default function Projects() {
         {/* Project Highlight */}
         <div className="mt-16 grid gap-8 md:grid-cols-2">
           {/* Project Image */}
-          <div className="bg-card rounded-2xl shadow-2xl">
+          <div className="relative aspect-video w-full overflow-hidden rounded-2xl shadow-2xl">
             <Image
-              width={500}
-              height={400}
+              fill
+              priority
               src={activeProject.image}
               alt={activeProject.title}
-              className="aspect-video h-full w-full rounded-2xl object-cover"
+              className="rounded-2xl object-cover"
             />
           </div>
           {/* Project info */}
@@ -77,14 +77,24 @@ export default function Projects() {
             </div>
 
             <div className="flex gap-6">
-              <button className="from-gradient-start text-primary-foreground via-gradient-mid to-gradient-end flex items-center gap-2 rounded-2xl bg-linear-to-r px-4 py-2">
+              <a
+                href={activeProject.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="from-gradient-start text-primary-foreground via-gradient-mid to-gradient-end flex items-center gap-2 rounded-2xl bg-linear-to-r px-4 py-2"
+              >
                 <ExternalLink className="size-4" />
                 <span className="text-sm font-medium">View Project</span>
-              </button>
-              <button className="bg-muted/60 border-border/60 flex items-center gap-2 rounded-2xl border px-4 py-2">
+              </a>
+              <a
+                href={activeProject.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-muted/60 border-border/60 flex items-center gap-2 rounded-2xl border px-4 py-2"
+              >
                 <Github className="size-4" />
                 <span className="text-sm font-medium">GitHub</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -122,7 +132,7 @@ export default function Projects() {
             <button
               key={item.id}
               className={cn(
-                'relative rounded-2xl shadow-2xl backdrop-blur-3xl',
+                'bg-background/60 relative aspect-video w-full overflow-hidden rounded-2xl backdrop-blur-3xl',
                 activeIndex === index ? 'ring-primary ring-2' : '',
               )}
               onClick={() => setActiveIndex(index)}
@@ -130,9 +140,8 @@ export default function Projects() {
               <Image
                 src={item.image}
                 alt={item.title}
-                width={400}
-                height={400}
-                className="aspect-video w-full rounded-2xl object-cover"
+                fill
+                className="rounded-2xl object-cover"
               />
               <div className="from-background/80 absolute bottom-2 left-2 bg-linear-to-t to-transparent text-xs font-medium">
                 <span> {item.title}</span>
