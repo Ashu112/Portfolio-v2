@@ -7,7 +7,7 @@ export const projectData: ProjectDataType[] = [
     description:
       'A fully responsive, open-source, SEO-optimized portfolio template with 8+ customizable themes and advanced rate limiting.',
     longDescription:
-      'Built from the ground up with performance and customization in mind. Features IP and User-Agent-based rate limiting in the email service, reducing spam by 400%.',
+      'Built from the ground up with performance and customization in mind. Features IP and User-Agent-based rate limiting in the email service.',
     techStack: [
       'Next.js',
       'TypeScript',
@@ -27,7 +27,7 @@ export const projectData: ProjectDataType[] = [
     description:
       'An interactive visual editor for JSON data with a node-based tree view and real-time editing capabilities.',
     longDescription:
-      'Stress-tested to handle 10k+ nodes with deferred loading. Enhanced UX with drag, pan, zoom, and keyboard shortcuts, improving editing efficiency by 40%.',
+      'Stress-tested to handle 10k+ nodes with deferred loading. Enhanced UX with drag, pan, zoom, and keyboard shortcuts, improving editing efficiency.',
     techStack: [
       'React.js',
       'TypeScript',

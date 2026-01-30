@@ -12,11 +12,13 @@ export default function Projects() {
   const activeProject = projectData[activeIndex];
 
   const nextProject = () => {
-    setActiveIndex((prev) => prev + 1);
+    setActiveIndex((prev) => (prev + 1) % projectData.length);
   };
 
   const previousProject = () => {
-    setActiveIndex((prev) => prev - 1);
+    setActiveIndex(
+      (prev) => (prev - 1 + projectData.length) % projectData.length,
+    );
   };
 
   return (
