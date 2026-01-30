@@ -1,6 +1,7 @@
 'use client';
 
 import { projectData } from '@/data/ProjectsData';
+import { ExternalLink, Github } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -32,7 +33,7 @@ export default function Projects() {
               height={400}
               src={activeProject.image}
               alt={activeProject.title}
-              className="aspect-video w-full rounded-2xl object-cover"
+              className="aspect-video h-full w-full rounded-2xl object-cover"
             />
           </div>
           {/* Project info */}
@@ -62,6 +63,17 @@ export default function Projects() {
                   {skill}
                 </div>
               ))}
+            </div>
+
+            <div className="flex gap-6">
+              <button className="from-gradient-start text-primary-foreground via-gradient-mid to-gradient-end flex items-center gap-2 rounded-2xl bg-linear-to-r px-4 py-2">
+                <ExternalLink className="size-4" />
+                <span className="text-sm font-medium">View Project</span>
+              </button>
+              <button className="bg-muted/60 border-border/60 flex items-center gap-2 rounded-2xl border px-4 py-2">
+                <Github className="size-4" />
+                <span className="text-sm font-medium">GitHub</span>
+              </button>
             </div>
           </div>
         </div>
