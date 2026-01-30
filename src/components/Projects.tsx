@@ -1,7 +1,8 @@
 'use client';
 
 import { projectData } from '@/data/ProjectsData';
-import { ExternalLink, Github } from 'lucide-react';
+import { cn } from '@/utils/cn';
+import { ChevronLeft, ChevronRight, ExternalLink, Github } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -9,6 +10,14 @@ export default function Projects() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const activeProject = projectData[activeIndex];
+
+  const nextProject = () => {
+    setActiveIndex((prev) => prev + 1);
+  };
+
+  const previousProject = () => {
+    setActiveIndex((prev) => prev - 1);
+  };
 
   return (
     <section id="projects" className="min-h-screen py-32">
@@ -79,7 +88,32 @@ export default function Projects() {
         </div>
 
         {/* Navigation */}
+        <div className="my-10 flex items-center justify-center gap-4">
+          <button
+            onClick={previousProject}
+            className="bg-card flex h-8 w-8 items-center justify-center rounded-full"
+          >
+            <ChevronLeft className="size-4" />
+          </button>
 
+          {projectData.map((_, index) => (
+            <div
+              key={index}
+              className={cn(
+                'bg-muted size-3 rounded-full',
+                activeIndex === index
+                  ? 'from-gradient-start to-gradient-end w-6 bg-linear-to-r'
+                  : '',
+              )}
+            ></div>
+          ))}
+          <button
+            className="bg-card flex h-8 w-8 items-center justify-center rounded-full"
+            onClick={nextProject}
+          >
+            <ChevronRight className="size-4" />
+          </button>
+        </div>
         {/* image cards */}
       </div>
     </section>
