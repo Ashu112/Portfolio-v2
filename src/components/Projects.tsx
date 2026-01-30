@@ -38,7 +38,7 @@ export default function Projects() {
         {/* Project Highlight */}
         <div className="mt-16 grid gap-8 md:grid-cols-2">
           {/* Project Image */}
-          <div className="rounded-2xl">
+          <div className="bg-card rounded-2xl shadow-2xl">
             <Image
               width={500}
               height={400}
@@ -90,7 +90,7 @@ export default function Projects() {
         </div>
 
         {/* Navigation */}
-        <div className="my-10 flex items-center justify-center gap-4">
+        <div className="mt-14 flex items-center justify-center gap-4">
           <button
             onClick={previousProject}
             className="bg-card flex h-8 w-8 items-center justify-center rounded-full"
@@ -117,6 +117,29 @@ export default function Projects() {
           </button>
         </div>
         {/* image cards */}
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {projectData.map((item, index) => (
+            <button
+              key={item.id}
+              className={cn(
+                'relative rounded-2xl shadow-2xl backdrop-blur-3xl',
+                activeIndex === index ? 'ring-primary ring-2' : '',
+              )}
+              onClick={() => setActiveIndex(index)}
+            >
+              <Image
+                src={item.image}
+                alt={item.title}
+                width={400}
+                height={400}
+                className="aspect-video w-full rounded-2xl object-cover"
+              />
+              <div className="from-background/80 absolute bottom-2 left-2 bg-linear-to-t to-transparent text-xs font-medium">
+                <span> {item.title}</span>
+              </div>
+            </button>
+          ))}
+        </div>
       </div>
     </section>
   );
