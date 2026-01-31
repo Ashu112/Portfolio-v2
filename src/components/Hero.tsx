@@ -38,7 +38,13 @@ const techStack: TechStackTypes = [
 
 export default function Hero() {
   return (
-    <section className="min-h-screen">
+    <section className="relative min-h-screen overflow-hidden">
+      {/* Background Orbs */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="from-gradient-start/20 absolute h-150 w-150 rounded-full bg-linear-to-r to-transparent blur-3xl" />
+        <div className="from-gradient-mid/15 absolute h-125 w-125 rounded-full bg-linear-to-r to-transparent blur-3xl" />
+        <div className="from-gradient-end/10 absolute h-100 w-100 rounded-full bg-linear-to-r to-transparent blur-3xl" />
+      </div>
       <div className="section-container pt-6">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Hero left */}
