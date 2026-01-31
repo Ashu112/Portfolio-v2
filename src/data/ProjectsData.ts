@@ -16,7 +16,7 @@ export const projectData: ProjectDataType[] = [
       'Nodemailer',
       'Vercel',
     ],
-    image: '/project-1.jpg',
+    image: '/portfolio.png',
     github: 'https://github.com/Ashu112',
     link: '#',
     color: 'from-primary to-accent',

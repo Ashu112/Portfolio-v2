@@ -38,7 +38,22 @@ const techStack: TechStackTypes = [
 
 export default function Hero() {
   return (
-    <section className="min-h-screen">
+    <section className="relative min-h-screen overflow-hidden">
+      {/* Background Orbs */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div
+          className="from-gradient-start/20 absolute h-150 w-150 rounded-full bg-linear-to-r to-transparent blur-3xl"
+          style={{ top: '-10%', left: '-10%' }}
+        />
+        <div
+          className="from-gradient-mid/15 absolute h-125 w-125 rounded-full bg-linear-to-r to-transparent blur-3xl"
+          style={{ bottom: '10%', right: '-5%' }}
+        />
+        <div
+          className="from-gradient-end/10 absolute h-100 w-100 rounded-full bg-linear-to-r to-transparent blur-3xl"
+          style={{ top: '50%', left: '30%' }}
+        />
+      </div>
       <div className="section-container pt-6">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Hero left */}
@@ -51,7 +66,7 @@ export default function Hero() {
               <h1 className="text-5xl leading-tight font-bold sm:text-6xl lg:text-7xl">
                 <span className="text-foreground"> Hi, I&apos;m</span>
                 <br />
-                <span> Ashutosh Kumar</span>
+                <span className="gradient-text"> Ashutosh Kumar</span>
               </h1>
               <p className="text-muted-foreground text-xl sm:text-2xl">
                 Software Engineer
@@ -100,7 +115,7 @@ export default function Hero() {
 
           {/* Hero right */}
           <div>
-            <div className="border-primary rounded-xl border px-10 py-6">
+            <div className="bg-card/60 border-primary shadow-elevated-lg rounded-3xl border p-8">
               <div className="mb-8 flex items-center gap-6">
                 <div className="bg-primary flex h-20 w-20 items-center justify-center rounded-xl">
                   <span className="text-primary-foreground text-3xl font-bold">
@@ -133,15 +148,15 @@ export default function Hero() {
               </div>
               <div className="border-border mt-8 grid grid-cols-3 border-t pt-8">
                 <div className="text-center">
-                  <p className="text-xl font-bold text-pink-600">4+</p>
+                  <p className="gradient-text text-xl font-bold">4+</p>
                   <p className="text-muted-foreground text-base">Years Exp</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-xl font-bold text-pink-600">IIT </p>
+                  <p className="gradient-text text-xl font-bold">IIT </p>
                   <p className="text-muted-foreground text-base">Guwahati</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-xl font-bold text-pink-600">20+</p>
+                  <p className="gradient-text text-xl font-bold">20+</p>
                   <p className="text-muted-foreground text-base">Projects</p>
                 </div>
               </div>
