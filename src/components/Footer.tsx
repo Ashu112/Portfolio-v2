@@ -9,7 +9,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="border-border relative border-t py-12">
+    <footer className="border-border relative border-t py-6">
       <div className="section-container">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           {/* Logo & Copyright */}
@@ -20,11 +20,6 @@ export const Footer = () => {
             >
               AK
             </motion.span>
-            <p className="text-muted-foreground flex items-center gap-1.5 text-sm">
-              Built with{' '}
-              <Heart className="text-primary fill-primary h-3.5 w-3.5" /> by
-              Ashutosh Kumar
-            </p>
             <p className="text-muted-foreground text-xs">
               © {new Date().getFullYear()} All rights reserved.
             </p>
@@ -32,24 +27,29 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div className="text-muted-foreground flex flex-wrap justify-center gap-6 text-sm">
-            {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map(
-              (item) => (
-                <motion.a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document
-                      .querySelector(`#${item.toLowerCase()}`)
-                      ?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="hover:text-primary animated-underline transition-colors"
-                  whileHover={{ y: -2 }}
-                >
-                  {item}
-                </motion.a>
-              ),
-            )}
+            {[
+              'About',
+              'Experience',
+              'Projects',
+              'Education',
+              'Skills',
+              'Contact',
+            ].map((item) => (
+              <motion.a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .querySelector(`#${item.toLowerCase()}`)
+                    ?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="hover:text-primary animated-underline transition-colors"
+                whileHover={{ y: -2 }}
+              >
+                {item}
+              </motion.a>
+            ))}
           </div>
 
           {/* Back to top */}
