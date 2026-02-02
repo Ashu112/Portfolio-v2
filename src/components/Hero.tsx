@@ -148,7 +148,7 @@ export default function Hero() {
               </div>
               <div className="border-border mt-8 grid grid-cols-3 border-t pt-8">
                 <div className="text-center">
-                  <p className="gradient-text text-xl font-bold">4+</p>
+                  <p className="gradient-text text-xl font-bold">3</p>
                   <p className="text-muted-foreground text-base">Years Exp</p>
                 </div>
                 <div className="text-center">
