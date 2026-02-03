@@ -80,7 +80,7 @@ export default function About() {
                 />
                 <div className="absolute right-6 bottom-6 left-6">
                   <div className="bg-card space-y-1 rounded-3xl px-4 py-3">
-                    <p className="text-lg font-medium text-pink-600">
+                    <p className="gradient-text text-lg font-medium">
                       Software Engineer
                     </p>
                     <p className="text-muted-foreground text-xs">
