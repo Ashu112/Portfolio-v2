@@ -137,7 +137,7 @@ export default function About() {
               key={i}
               className="bg-card border-border h-full rounded-2xl border p-8"
             >
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-pink-600">
+              <div className="from-gradient-start to-gradient-end mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-r">
                 <item.icon className="text-primary-foreground h-6 w-6" />
               </div>
               <h3 className="text-xl">{item.heading}</h3>
