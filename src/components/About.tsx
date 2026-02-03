@@ -80,7 +80,7 @@ export default function About() {
                 />
                 <div className="absolute right-6 bottom-6 left-6">
                   <div className="bg-card space-y-1 rounded-3xl px-4 py-3">
-                    <p className="text-lg font-medium text-pink-600">
+                    <p className="gradient-text text-lg font-medium">
                       Software Engineer
                     </p>
                     <p className="text-muted-foreground text-xs">
@@ -115,15 +115,15 @@ export default function About() {
             </div>
             <div className="border-border mt-8 grid grid-cols-3 gap-6 border-t pt-8">
               <div className="space-y-1">
-                <p className="text-3xl font-bold text-pink-600">3</p>
+                <p className="gradient-text text-3xl font-bold">3</p>
                 <p className="text-muted-foreground">Years Experience</p>
               </div>
               <div className="space-y-1">
-                <p className="text-3xl font-bold text-pink-600">20+</p>
+                <p className="gradient-text text-3xl font-bold">20+</p>
                 <p className="text-muted-foreground">Projects Shipped</p>
               </div>
               <div className="space-y-1">
-                <p className="text-3xl font-bold text-pink-600">10k+</p>
+                <p className="gradient-text text-3xl font-bold">10k+</p>
                 <p className="text-muted-foreground">Users Impacted</p>
               </div>
             </div>
@@ -137,7 +137,7 @@ export default function About() {
               key={i}
               className="bg-card border-border h-full rounded-2xl border p-8"
             >
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-pink-600">
+              <div className="from-gradient-start to-gradient-end mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-r">
                 <item.icon className="text-primary-foreground h-6 w-6" />
               </div>
               <h3 className="text-xl">{item.heading}</h3>
