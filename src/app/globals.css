@@ -118,6 +118,25 @@
       hsl(var(--gradient-end)) 100%
     );
   }
+
+  /* Animated gradient background */
+  .gradient-bg {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gradient-start) / 0.15) 0%,
+      hsl(var(--gradient-mid) / 0.1) 50%,
+      hsl(var(--gradient-end) / 0.15) 100%
+    );
+  }
+
+  .gradient-bg-strong {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gradient-start)) 0%,
+      hsl(var(--gradient-mid)) 50%,
+      hsl(var(--gradient-end)) 100%
+    );
+  }
 }
 
 @layer utilities {
