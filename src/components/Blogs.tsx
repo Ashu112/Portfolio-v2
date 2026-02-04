@@ -17,7 +17,7 @@ export default function Blogs() {
         </div>
         {/* Blogs Card */}
         <div className="bg-card mt-16 flex items-center gap-8 rounded-xl p-12">
-          <div className="flex size-28 shrink-0 items-center justify-center rounded-3xl bg-pink-400">
+          <div className="gradient-bg-strong flex size-28 shrink-0 items-center justify-center rounded-3xl">
             <BookOpen className="text-primary-foreground size-14" />
           </div>
           <div className="space-y-5">

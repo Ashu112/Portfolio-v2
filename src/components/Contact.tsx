@@ -87,7 +87,7 @@ export default function Contact() {
                 className="bg-muted border-border w-full rounded-2xl border px-4 py-2.5"
                 rows={6}
               />
-              <button className="text-primary-foreground flex w-full items-center justify-center gap-4 rounded-xl bg-pink-500 py-2.5">
+              <button className="text-primary-foreground gradient-bg-strong flex w-full items-center justify-center gap-4 rounded-xl py-2.5">
                 <Send />
                 Send Message
               </button>

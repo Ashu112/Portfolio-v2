@@ -8,7 +8,7 @@ export default function Resume() {
           <div className="flex items-center justify-between">
             {/* Resume info */}
             <div className="flex items-center gap-6">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-pink-500">
+              <div className="gradient-bg-strong flex h-16 w-16 items-center justify-center rounded-2xl">
                 <FileText className="text-primary-foreground size-8" />
               </div>
               <div className="space-y-1">
@@ -25,7 +25,7 @@ export default function Resume() {
             <a
               href="/Ashutosh_Kumar_Resume.pdf"
               download
-              className="text-primary-foreground inline-flex items-center gap-3 rounded-xl bg-pink-500 px-8 py-4 font-semibold"
+              className="text-primary-foreground gradient-bg-strong inline-flex items-center gap-3 rounded-xl px-8 py-4 font-semibold"
             >
               <ArrowDown className="size-5" />
               Download Resume
