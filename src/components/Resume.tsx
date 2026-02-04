@@ -8,7 +8,7 @@ export default function Resume() {
           <div className="flex items-center justify-between">
             {/* Resume info */}
             <div className="flex items-center gap-6">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-pink-500">
+              <div className="from-gradient-start via-gradient-mid to-gradient-end flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-r">
                 <FileText className="text-primary-foreground size-8" />
               </div>
               <div className="space-y-1">
