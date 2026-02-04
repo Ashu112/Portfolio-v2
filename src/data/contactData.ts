@@ -8,7 +8,7 @@ export const contactData: ContactDataType[] = [
     icon: Mail,
     arrowIcon: true,
     link: 'mailto:kashu2611@gmail.com',
-    style: 'bg-pink-500 text-background',
+    style: 'gradient-bg-strong text-background',
   },
   {
     name: 'LinkedIn',
