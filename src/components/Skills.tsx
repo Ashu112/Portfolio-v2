@@ -2,7 +2,9 @@ import { proficiencyData, skillCategories } from '@/data/skills';
 
 export default function Skills() {
   return (
-    <section id="skills" className="min-h-screen">
+    <section id="skills" className="relative min-h-screen overflow-hidden">
+      {/* Background */}
+      <div className="gradient-bg absolute inset-0 opacity-30" />
       <div className="section-container py-24">
         <div className="space-y-20">
           {/* Skills Heading */}
