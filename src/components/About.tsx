@@ -63,7 +63,7 @@ const values: ValuesType = [
 
 export default function About() {
   return (
-    <section id="about" className="py-24 lg:py-32">
+    <section id="about" className="relative overflow-hidden py-24 lg:py-32">
       {/* Background accent */}
       <div className="gradient-bg absolute inset-0 opacity-50" />
       <div className="section-container">

@@ -22,7 +22,12 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="min-h-screen py-32">
+    <section
+      id="projects"
+      className="relative min-h-screen overflow-hidden py-32"
+    >
+      {/* Background */}
+      <div className="gradient-bg absolute inset-0 opacity-30" />
       <div className="section-container">
         {/* Project header */}
         <div className="max-w-3xl space-y-4">
