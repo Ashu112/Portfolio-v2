@@ -24,7 +24,9 @@ function ContactInfoCard({ data }: { data: ContactDataType }) {
 
 export default function Contact() {
   return (
-    <section className="min-h-screen py-20">
+    <section className="relative min-h-screen overflow-hidden py-20">
+      {/* Background */}
+      <div className="gradient-bg absolute inset-0 opacity-50" />
       <div className="section-container space-y-6 text-center">
         {/*Contact section content */}
         <div className="space-y-4">

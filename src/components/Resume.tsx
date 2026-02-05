@@ -4,7 +4,7 @@ export default function Resume() {
   return (
     <section className="relative overflow-hidden py-16">
       {/* Background */}
-      <div className="from-gradient-start/10 via-gradient-mid/10 to-gradient-end/10 absolute inset-0 bg-gradient-to-r" />
+      <div className="from-gradient-start/10 via-gradient-mid/10 to-gradient-end/10 absolute inset-0 bg-linear-to-r" />
       <div className="section-container">
         <div className="border-border bg-card rounded-3xl border p-10">
           <div className="flex items-center justify-between">
