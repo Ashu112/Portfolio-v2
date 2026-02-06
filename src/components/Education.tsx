@@ -22,7 +22,7 @@ export default function Education() {
               premier institutions.
             </p>
           </div>
-          <div className="bg-card flex max-w-4xl gap-8 rounded-3xl px-10 py-12">
+          <div className="bg-card flex max-w-4xl flex-col gap-8 rounded-3xl px-10 py-12 md:flex-row">
             <div className="from-gradient-start via-gradient-mid to-gradient-end flex h-32 min-w-32 items-center justify-center rounded-2xl bg-linear-to-r">
               <GraduationCap className="h-16 w-16 text-black" />
             </div>

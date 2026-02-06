@@ -2,7 +2,7 @@ import { ArrowDown, FileText } from 'lucide-react';
 
 export default function Resume() {
   return (
-    <section className="relative overflow-hidden py-16">
+    <section className="relative overflow-hidden py-16 lg:py-32">
       {/* Background */}
       <div className="from-gradient-start/10 via-gradient-mid/10 to-gradient-end/10 absolute inset-0 bg-linear-to-r" />
       <div className="section-container">
