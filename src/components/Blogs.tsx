@@ -16,7 +16,7 @@ export default function Blogs() {
           </p>
         </div>
         {/* Blogs Card */}
-        <div className="bg-card mt-16 flex items-center gap-8 rounded-xl p-12">
+        <div className="bg-card mt-16 flex flex-col items-start gap-8 rounded-xl p-6 md:flex-row md:items-center md:p-12">
           <div className="gradient-bg-strong flex size-28 shrink-0 items-center justify-center rounded-3xl">
             <BookOpen className="text-primary-foreground size-14" />
           </div>
@@ -35,19 +35,19 @@ export default function Blogs() {
               </span>
             </p>
             <div className="space-y-2">
-              <p>Upcoming topics:</p>
+              <p className="md:text-lg">Upcoming topics:</p>
               <div className="flex flex-wrap items-center gap-2">
                 {blogTopicsData.map((topic) => (
                   <div
                     key={topic}
-                    className="bg-muted/90 text-muted-foreground rounded-xl px-3 py-2"
+                    className="bg-muted/90 text-muted-foreground rounded-xl px-3 py-2 text-sm md:text-base"
                   >
                     {topic}
                   </div>
                 ))}
               </div>
             </div>
-            <button className="bg-muted/50 border-border inline-flex items-center gap-2 rounded-xl border px-6 py-3">
+            <button className="bg-muted/50 border-border inline-flex w-full items-center justify-center gap-2 rounded-xl border px-6 py-3 sm:w-auto">
               <span>Notify Me</span>
               <ArrowRight className="size-4" />
             </button>

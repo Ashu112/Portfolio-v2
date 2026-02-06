@@ -84,7 +84,7 @@ export default function Hero() {
             <div className="flex items-center gap-6">
               <a
                 href="#"
-                className="text-primary-foreground bg-primary/90 inline-flex items-center gap-2 rounded-xl px-6 py-3"
+                className="text-primary-foreground gradient-bg-strong inline-flex items-center gap-2 rounded-xl px-6 py-3"
               >
                 <span>Explore My Work</span>
                 <ArrowDown className="h-4 w-4" />
@@ -117,7 +117,7 @@ export default function Hero() {
           <div>
             <div className="bg-card/60 border-primary shadow-elevated-lg rounded-3xl border p-8">
               <div className="mb-8 flex items-center gap-6">
-                <div className="bg-primary flex h-20 w-20 items-center justify-center rounded-xl">
+                <div className="gradient-bg-strong flex h-20 w-20 items-center justify-center rounded-xl">
                   <span className="text-primary-foreground text-3xl font-bold">
                     AK
                   </span>
