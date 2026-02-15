@@ -61,6 +61,12 @@ const values: ValuesType = [
   },
 ];
 
+const stats = [
+  { value: '3', label: 'Years Experience' },
+  { value: '20+', label: 'Projects Shipped' },
+  { value: '10k+', label: 'Users Impacted' },
+];
+
 export default function About() {
   return (
     <section id="about" className="relative overflow-hidden py-24 lg:py-32">
@@ -116,18 +122,14 @@ export default function About() {
               </p>
             </div>
             <div className="border-border mt-8 grid grid-cols-3 gap-6 border-t pt-8">
-              <div className="space-y-1">
-                <p className="gradient-text text-3xl font-bold">3</p>
-                <p className="text-muted-foreground">Years Experience</p>
-              </div>
-              <div className="space-y-1">
-                <p className="gradient-text text-3xl font-bold">20+</p>
-                <p className="text-muted-foreground">Projects Shipped</p>
-              </div>
-              <div className="space-y-1">
-                <p className="gradient-text text-3xl font-bold">10k+</p>
-                <p className="text-muted-foreground">Users Impacted</p>
-              </div>
+              {stats.map((stat, index) => (
+                <div key={index} className="space-y-1">
+                  <p className="gradient-text text-3xl font-bold">
+                    {stat.value}
+                  </p>
+                  <p className="text-muted-foreground">{stat.label}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
