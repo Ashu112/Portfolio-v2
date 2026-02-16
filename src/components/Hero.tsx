@@ -115,7 +115,7 @@ export default function Hero() {
 
           {/* Hero right */}
           <div>
-            <div className="bg-card/60 border-primary shadow-elevated-lg rounded-3xl border p-8">
+            <div className="bg-card/60 gradient-border shadow-elevated-lg rounded-3xl p-8">
               <div className="mb-8 flex items-center gap-6">
                 <div className="gradient-bg-strong flex h-20 w-20 items-center justify-center rounded-xl">
                   <span className="text-primary-foreground text-3xl font-bold">

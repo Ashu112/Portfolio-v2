@@ -138,7 +138,7 @@ export default function Projects() {
               key={item.id}
               className={cn(
                 'bg-background/60 relative aspect-video w-full overflow-hidden rounded-2xl backdrop-blur-3xl',
-                activeIndex === index ? 'ring-primary ring-2' : '',
+                activeIndex === index ? 'gradient-border ring-2' : '',
               )}
               onClick={() => setActiveIndex(index)}
             >
