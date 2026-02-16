@@ -78,7 +78,7 @@ export default function About() {
           {/* Image container */}
           <div className="relative">
             <div className="relative mx-auto aspect-4/5 max-w-md lg:mx-0">
-              <div className="border-border bg-muted relative overflow-hidden rounded-3xl border-2">
+              <div className="gradient-border bg-muted relative overflow-hidden rounded-3xl">
                 <Image
                   src="/Ashu_profile.png"
                   width={400}
