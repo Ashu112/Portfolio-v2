@@ -92,7 +92,7 @@ export default function About() {
                       Software Engineer
                     </p>
                     <p className="text-muted-foreground text-xs">
-                      IIT GUwahati &apos;21
+                      IIT Guwahati &apos;21
                     </p>
                   </div>
                 </div>
